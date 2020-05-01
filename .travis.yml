@@ -1,0 +1,10 @@
+# Shamelessly stolen from RES 
+language: java
+
+cache:
+  directories:
+    - $HOME/.m2
+
+script:
+  - echo "GENBot at work... let's see if tests pass!"
+  - mvn clean test
