@@ -17,8 +17,8 @@ public class Order {
         return products.size();
     }
 
-    public Product getProduct(int j) {
-        return products.get(j);
+    public Product getProduct(int index) {
+        return products.get(index);
     }
 
     public void AddProduct(Product product) {
