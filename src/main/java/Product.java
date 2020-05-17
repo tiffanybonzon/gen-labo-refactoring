@@ -1,12 +1,11 @@
 public class Product {
-    //public static final int SIZE_NOT_APPLICABLE = -1;
     private String code;
-    private int color;
+    private Color color;
     private Size size;
     private double price;
     private String currency;
 
-    public Product(String code, int color, Size size, double price, String currency) {
+    public Product(String code, Color color, Size size, double price, String currency) {
         this.code = code;
         this.color = color;
         this.size = size;
@@ -18,7 +17,7 @@ public class Product {
         return code;
     }
 
-    public int getColor() {
+    public Color getColor() {
         return color;
     }
 
