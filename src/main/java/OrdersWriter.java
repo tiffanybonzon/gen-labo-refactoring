@@ -1,8 +1,7 @@
 import java.util.ArrayList;
-import java.util.List;
 
 public class OrdersWriter {
-    private List<Order> orders = new ArrayList<>();
+    private ArrayList<Order> orders;
 
     public OrdersWriter(ArrayList<Order> orders) {
         this.orders = orders;
@@ -51,7 +50,7 @@ public class OrdersWriter {
 
         if (product.getSize() != Size.SIZE_NOT_APPLICABLE) {
             sb.append("\"size\": \"");
-            sb.append(getSizeFor(product));
+            sb.append(product.getSize());
             sb.append("\", ");
         }
 
@@ -61,10 +60,6 @@ public class OrdersWriter {
         sb.append("\"currency\": \"");
         sb.append(product.getCurrency());
         sb.append("\"}, ");
-    }
-
-    private String getSizeFor(Product product) {
-        return product.getSize().name();
     }
 
     private String getColorFor(Product product) {
